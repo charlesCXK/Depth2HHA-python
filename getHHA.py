@@ -67,3 +67,22 @@ if __name__ == "__main__":
     hha_complete = getHHA(camera_matrix, D, D)
     cv2.imwrite('demo/hha.png', hha)
     cv2.imwrite('demo/hha_complete.png', hha_complete)
+    
+    
+    ''' multii-peocessing example '''
+    '''
+    from multiprocessing import Pool
+    
+    def generate_hha(i):
+        # generate hha for the i-th image
+        return
+    
+    processNum = 16
+    pool = Pool(processNum)
+
+    for i in range(img_num):
+        print(i)
+        pool.apply_async(generate_hha, args=(i,))
+        pool.close()
+        pool.join()
+    ''' 
