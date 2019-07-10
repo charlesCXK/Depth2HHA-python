@@ -69,7 +69,7 @@ if __name__ == "__main__":
     cv2.imwrite('demo/hha_complete.png', hha_complete)
     
     
-    ''' multii-peocessing example '''
+    ''' multi-peocessing example '''
     '''
     from multiprocessing import Pool
     
