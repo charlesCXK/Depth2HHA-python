@@ -37,6 +37,7 @@ def filterItChopOff(f, r, sp):
 
     for i in range(f.shape[2]):
         #  fFilt(:,:,i) = filter2(B, f(:,:,i));
+        tmp = cv2.filter2D(np.rot90(f[:, :, i], 2), -1, np.rot90(np.rot90(B, 2), 2))
         tmp = signal.convolve2d(np.rot90(f[:, :, i], 2), np.rot90(np.rot90(B, 2), 2), mode="same")
         fFilt[:, :, i] = np.rot90(tmp, 2)
     fFilt = fFilt - delta
@@ -165,6 +166,7 @@ def rotatePC(pc, R):
     if(np.array_equal(R, np.eye(3))):
         return pc
     else:
+        R = R.astype(np.float64)
         dim = pc.shape[0] * pc.shape[1]
         pc = np.swapaxes(np.swapaxes(pc, 0, 2), 1, 2)
         res = np.reshape(pc, (3, dim), 'F')
