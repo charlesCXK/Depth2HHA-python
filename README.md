@@ -72,6 +72,21 @@ HHA using D and D:
 
 
 
+## Citation
+
+If you find this project useful in your research, please consider cite:
+
+```latex
+@misc{Depth2HHA-python,
+    title={{Depth2HHA-python}: Converting depth maps to HHA encodings},
+    author={Xiaokang Chen},
+    howpublished = {\url{https://github.com/charlesCXK/Depth2HHA-python}},
+    year={2018}
+}
+```
+
+
+
 ### TODO
 
 - Parallel processing
